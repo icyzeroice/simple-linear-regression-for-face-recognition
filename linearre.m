@@ -4,7 +4,7 @@ averagePercentBoth = [];
 
 for fileOrder=1:10
 				% direction config
-  dir = 'ORL_32x32/';
+  dir = 'Yale_32x32/';
   picSize = 32;
   testFileName = 'StTestFile';
   trainFileName = 'StTrainFile';
@@ -111,13 +111,13 @@ for fileOrder=1:10
     
     testnum = TestMatrix(testTime, oneLengthGnd);
     if pN==TestMatrix(testTime, oneLengthGnd)
-      trueTimeNearest+=1;
+      trueTimeNearest=trueTimeNearest+1;
     end
     if pNFar==TestMatrix(testTime, oneLengthGnd)
-      trueTimeFarthest+=1;
+      trueTimeFarthest=trueTimeFarthest+1;
     end
     if pNBoth==TestMatrix(testTime, oneLengthGnd)
-      trueTimeBoth+=1;
+      trueTimeBoth=trueTimeBoth+1;
     end
   end
 		  % the accuracy everytime -------------------> output
